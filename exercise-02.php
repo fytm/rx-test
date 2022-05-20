@@ -22,7 +22,7 @@ function get_orders()
     return json_encode($result, JSON_PRETTY_PRINT, 30);
 }
 
-function get_order_details($id)
+function get_order_with_details($id)
 {
     global $db;
     $orders_query = $db->prepare("SELECT *
@@ -37,4 +37,4 @@ function get_order_details($id)
 
 //echo get_orders(32);
 
-echo get_order_details(10248);
+echo get_order_with_details(10248);
